@@ -1,22 +1,17 @@
 language: python
 python:
-  - "2.6"
-  - "2.7"
-  - "3.3"
+- '2.6'
+- '2.7'
+- '3.3'
 install:
-# install dependencies from setup.py
-   - pip install .
-# install dependencies from requirements.txt
-#   - pip install -r requirements.txt
-# run nose tests
+- pip install .
 script: nosetests
-# more information on configuring openshift deployments
-# http://docs.travis-ci.com/user/deployment/openshift/
 deploy:
   provider: openshift
-  # Configure these values on your TravisCI 'Repository Settings' page:
-  # http://docs.travis-ci.com/user/environment-variables/#Using-Settings
-  user: $OPENSHIFT_USERNAME
-  password: $OPENSHIFT_PASSWORD
-  app: $OPENSHIFT_APP_NAME
-  domain: $OPENSHIFT_APP_NAMESPACE
+  user: jukka.kinnunen@iki.fi
+  password:
+    secure: rQn9saQQneGt0UtqTBt1MZGULl4XahLRbkDUQDY8jBwGKkl5n7p/7VGfLD0GoJPb+OrrIqgqO+3K6jB7qOc7kNA3JhL/RDr09u46MOy4KSvTto3mKHOyY+G2fQwM1akcNmiuz5tb0hxPW3/9zAqwHuwTK7IY2xCRem6sc8aqhXbIOarflEHXnFOqAGYdZhtvfVfkKl8vejcgjas8k/VQ2GpHi9xCHBCm1qp7ooIRQxxl3ArcEkaRfMEeq/fA7GPHMQ1VGS/ElYb+4VVLdDOAGxeOsRFxyX7WFQufgOfnl+9pXuEFwEfriy38LIHY5tSkjecEK7JdY2u6BSY/En1ilsh1b29KUMDmk/WMzG1P/MGHbpaFpf63PEBAc6zyjW3bNXT1nVNCdNkNZHwjIT9IuUKDtd+dnr/ENVhdpFDl2J8uvXK0gNQ9VW5eeQ5ThtVZYvVlhP0WIGj+v6mXK2jHPvi2QRfSrvt1KmqzZPE7KrKIbvGfrPFaXiaktOXm5f6gOI9ArQa2q154bdMasjka8KibFU3nQIuaePtOg8xpvZx8Y2g5Y5GTPT1SHMTXdWg4SX456eLo7ESJCH/iWqIFD1f81KBifBWoP1enCS17tGcjLdKfXSGIsnQLhV8d3Uu3R85SHV+DtmLCe7Hj210h7aGYKwqatStWk9cQVIm7OQI=
+  app: flask-base
+  domain: jk1
+  on:
+    repo: resutoor/flask-base
