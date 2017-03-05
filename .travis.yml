@@ -1,8 +1,6 @@
 language: python
 python:
-- '2.6'
 - '2.7'
-- '3.3'
 install:
 - pip install .
 script: nosetests
@@ -10,8 +8,8 @@ deploy:
   provider: openshift
   user: jukka.kinnunen@iki.fi
   password:
-    secure: rQn9saQQneGt0UtqTBt1MZGULl4XahLRbkDUQDY8jBwGKkl5n7p/7VGfLD0GoJPb+OrrIqgqO+3K6jB7qOc7kNA3JhL/RDr09u46MOy4KSvTto3mKHOyY+G2fQwM1akcNmiuz5tb0hxPW3/9zAqwHuwTK7IY2xCRem6sc8aqhXbIOarflEHXnFOqAGYdZhtvfVfkKl8vejcgjas8k/VQ2GpHi9xCHBCm1qp7ooIRQxxl3ArcEkaRfMEeq/fA7GPHMQ1VGS/ElYb+4VVLdDOAGxeOsRFxyX7WFQufgOfnl+9pXuEFwEfriy38LIHY5tSkjecEK7JdY2u6BSY/En1ilsh1b29KUMDmk/WMzG1P/MGHbpaFpf63PEBAc6zyjW3bNXT1nVNCdNkNZHwjIT9IuUKDtd+dnr/ENVhdpFDl2J8uvXK0gNQ9VW5eeQ5ThtVZYvVlhP0WIGj+v6mXK2jHPvi2QRfSrvt1KmqzZPE7KrKIbvGfrPFaXiaktOXm5f6gOI9ArQa2q154bdMasjka8KibFU3nQIuaePtOg8xpvZx8Y2g5Y5GTPT1SHMTXdWg4SX456eLo7ESJCH/iWqIFD1f81KBifBWoP1enCS17tGcjLdKfXSGIsnQLhV8d3Uu3R85SHV+DtmLCe7Hj210h7aGYKwqatStWk9cQVIm7OQI=
-  app: flask-base
+    secure: aWezURH5I019kDVwyeVEZBrTW03GZeNLQU6BUHRm7Xy+D0P9ZNrdTwDYLeMhR+pBkYHqqwnVnv46gQzEFDSXMPHqAkbhMVTxbAifnGKBRt4dZfZIEksSjyEcsqPq45UBn2JJ4B6sS4itsyzQFj5xO3qZT1rHQVNI9l6vVfn8v6SybKRZhgxDJqRlbCQPyg08DDGJHsfASOMsfN4GLoLiTB7Afqxh/2fiExaX3XlocX4jZlXFhV9HA+g6LPPVhzLkBuvsJL7ODDLr0DN2Mw/eGXY6nbrCDVJxoYEDjRz5GYZaq4D2H6cXFRhcupl7rvIzy1UfQsO4vcISiARYRb9XuGh5T9vFwmEh9nqSUuZE1lNtQeAmz0+DET+6rNZOv2RCjDA1dRN6tCMt4TJeV34B6Jw8VqKCcbCUc3iXBy149/QUJDllHaK7gcl5hmz6wExtRvxuQhYAy4TTcH4SMPrrz7azW6mNu2JN/whTGgLY6m+QbU2ymGuU3oao0NXDlpIUgxsKsnHlfaIqExiKGiO84ww78GGu4rvD6AR7WIYOpUNV9YJLtd4CcqKCSv54BWi1ofrj21y4f7BtmOy/tSdv9ECo5BdLCYuPOSqibSkfAhvwbUeqqZOP+AxqiNmAVdex1YYvkpohw+kS1FBYO22hNHPFARD6PyqeL+KO4XcU3Ms=
+  app: python27004
   domain: jk1
   on:
     repo: resutoor/flask-base
